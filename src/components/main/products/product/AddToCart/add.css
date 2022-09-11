@@ -1,0 +1,19 @@
+.add-btn {
+  display: flex;
+
+  padding: 0.6rem 1.1em;
+  background-color: #be1010;
+  border-radius: 1rem;
+  border: none;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.add-btn__text {
+  font-size: 1.2em;
+  color: white;
+}
+
+.add-btn__icon {
+  height: 1.2em;
+}

@@ -1,0 +1,12 @@
+.price {
+  position: relative;
+}
+
+.price span:first-child {
+  font-weight: 400;
+  font-size: 1.4em;
+}
+
+.price span:last-child {
+  font-size: 1em;
+}

@@ -4,7 +4,7 @@ import './menu.css';
 function Menu() {
   return (
     <section className="menu">
-      <span className="menu__text">Menu</span>
+      <span className="menu__text">Меню</span>
       <img className="menu__icon" src={Icon} />
     </section>
   );

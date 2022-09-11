@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  max-width: 30vw;
+  max-height: 50vh;
+
+  gap: 0.4em;
+  background-color: white;
+  position: relative;
+
+  border-radius: 1em;
+  box-shadow: 0em 0em 0.3em #999;
+}
