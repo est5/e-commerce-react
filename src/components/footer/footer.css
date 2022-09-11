@@ -10,3 +10,15 @@
   background-color: white;
   box-shadow: 0 0.01em 0.07em #999;
 }
+
+.footer__entry {
+  display: flex;
+  flex-direction: column-reverse;
+  color: #999;
+  font-size: 0.9em;
+  gap: 0.2em;
+}
+
+.footer__img {
+  height: 1.5em;
+}
