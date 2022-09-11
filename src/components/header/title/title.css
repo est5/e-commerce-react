@@ -3,3 +3,9 @@
   letter-spacing: 0.03rem;
   font-weight: 500;
 }
+
+@media (max-width: 650px) {
+  .header__title {
+    font-size: 1.5rem;
+  }
+}
