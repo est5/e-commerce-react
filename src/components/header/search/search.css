@@ -1,0 +1,12 @@
+.search {
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 0.8rem;
+  color: #999999;
+  align-items: flex-end;
+}
+
+.search__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
