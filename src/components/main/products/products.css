@@ -1,7 +1,8 @@
 .products {
   display: flex;
-  gap: 1em;
+  gap: 1.5em;
 
   flex-wrap: wrap;
   justify-content: center;
+  height: 100vh;
 }

@@ -1,0 +1,12 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 8vh;
+  min-width: 100%;
+  background-color: white;
+  box-shadow: 0 0.01em 0.07em #999;
+}
