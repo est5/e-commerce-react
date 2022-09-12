@@ -1,20 +1,19 @@
 function cartReducer(cart, action) {
   switch (action.type) {
-    case 'added': {
-      return [...cart, { id: action.id, amount: action.amount }];
-    }
-
     case 'changed': {
-      const out = cart.map((prod) => {
-        if (prod.id === action.id) {
-          if (action.amount == 0) {
-            return;
-          }
-          prod.amount = action.amount;
-        }
-        return prod;
-      });
-      return out;
+      const inCart = cart.find((ele) => ele.id == action.id);
+
+      return inCart
+        ? cart.map((prod) => {
+            if (prod.id === action.id) {
+              if (action.total == 0) {
+                return;
+              }
+              prod.total = action.total;
+            }
+            return prod;
+          })
+        : [...cart, { id: action.id, total: action.total }];
     }
 
     default: {

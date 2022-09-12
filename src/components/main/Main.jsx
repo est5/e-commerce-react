@@ -3,11 +3,11 @@ import Type from './type/Type';
 
 import './main.css';
 
-function Main() {
+function Main({ beer }) {
   return (
     <main className="main">
       <Type />
-      <Products />
+      <Products beer={beer} />
     </main>
   );
 }
