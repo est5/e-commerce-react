@@ -36,7 +36,7 @@ function Product({ id, image, price, name, meta, favorite }) {
         <img src={cart} className="add-btn__icon"></img>
       </button>
     ) : (
-      <div className="add-btn">
+      <div className="add-btn add-btn--amount">
         <img
           src={minus}
           className="add-btn__icon--amount"
