@@ -15,7 +15,14 @@ function cartReducer(cart, action) {
             }
             return prod;
           })
-        : [...cart, { id: action.id, total: action.total, amount: 1 }];
+        : [
+            ...cart,
+            {
+              id: action.id,
+              total: Number.parseFloat(action.total),
+              amount: 1,
+            },
+          ];
     }
 
     default: {

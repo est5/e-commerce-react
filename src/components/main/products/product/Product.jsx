@@ -66,6 +66,9 @@ function Product({ id, image, price, name, meta, favorite }) {
       </div>
     );
   };
+  let splitPrice = `${price}`.split('.');
+  let lPrice = splitPrice[0];
+  let rPrice = splitPrice[1];
 
   return (
     <div className="card">
@@ -77,8 +80,8 @@ function Product({ id, image, price, name, meta, favorite }) {
         <span className="meta-info__text">{meta}</span>
       </div>
       <div className="price">
-        <span>{price.split('.')[0]}.</span>
-        <span>{price.split('.')[1]}P</span>
+        <span>{lPrice}.</span>
+        <span>{rPrice}P</span>
       </div>
       {btn()}
     </div>

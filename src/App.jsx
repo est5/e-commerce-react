@@ -33,7 +33,7 @@ const BEER = [
   {
     id: ++id,
     img: zhiguli,
-    price: '109.99',
+    price: 109.99,
     name: 'Пиво Жигулевское Бочковое светлое',
     meta: 'Россия, 0.45л., 5%',
     favorite: false,
@@ -41,7 +41,7 @@ const BEER = [
   {
     id: ++id,
     img: zhiguliBarnoe,
-    price: '59.99',
+    price: 59.99,
     name: 'Пиво Жигули Барное светлое фильтр. непастер.ст',
     meta: 'Россия, 0.45 л., 5.5%',
     favorite: false,
