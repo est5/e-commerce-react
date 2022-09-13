@@ -14,6 +14,14 @@ function Product({ id, image, price, name, meta, favorite }) {
   const [total, setTotal] = useState(0);
   const [amount, setAmount] = useState(0);
 
+  useEffect(() => {
+    let obj = store.find((e) => e.id == id);
+    if (obj != null) {
+      setAmount(obj.amount);
+      setTotal(obj.total);
+    }
+  }, []);
+
   useEffect(() => setTotal(price * amount), [total, amount]);
 
   const addToCart = () => {

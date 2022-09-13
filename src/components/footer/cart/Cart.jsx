@@ -8,8 +8,9 @@ function Cart() {
 
   const filledCart = () => {
     let total = cart.reduce((prev, cur) => {
-      if (cur) return prev + cur.total;
+      return prev + Number.parseFloat(cur.total);
     }, 0);
+
     return (
       <div className="favorite footer__entry">
         <span>В корзине: {cart.length}</span>
