@@ -12,13 +12,13 @@ function Main({ beer, render }) {
         return (
           <>
             <Type />
-            <Products beer={beer} />
+            <Products beer={beer} favOnly={false} />
           </>
         );
       case 'cart':
         return <Cart beer={beer} />;
       case 'favorite':
-        return <Favorite />;
+        return <Products beer={beer} favOnly={true} />;
     }
   };
 

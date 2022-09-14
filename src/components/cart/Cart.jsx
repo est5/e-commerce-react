@@ -20,7 +20,6 @@ function Cart({ beer }) {
           name: b.name,
           meta: b.meta,
           price: b.price,
-          favorite: b.favorite,
           total: e.total,
           amount: e.amount,
         };

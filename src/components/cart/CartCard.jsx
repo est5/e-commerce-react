@@ -1,11 +1,20 @@
 import { useContext, useEffect, useState } from 'react';
 import { CartDispatchContext } from '../../app/CartContext';
+import {
+  FavoriteContext,
+  FavoriteDispatchContext,
+} from '../../app/FavoriteContext';
+
 import like from './heart-svgrepo-com.svg';
+import liked from './heart-filled.svg';
 
 function CartCard({ c }) {
   const dispatcher = useContext(CartDispatchContext);
+  const favStore = useContext(FavoriteContext);
+  const favDispatch = useContext(FavoriteDispatchContext);
   const [total, setTotal] = useState(c.total);
   const [amount, setAmount] = useState(c.amount);
+  const [fav, setFav] = useState(false);
 
   const update = () =>
     dispatcher({
@@ -20,9 +29,34 @@ function CartCard({ c }) {
     update();
   }, [amount, total]);
 
+  useEffect(() => {
+    const favChecked = favStore.find((e) => e.id == c.id);
+    if (favChecked) {
+      setFav(favChecked.fav);
+    }
+  }, []);
+
+  const flip = () => {
+    setFav(!fav);
+  };
+
+  useEffect(
+    () =>
+      favDispatch({
+        type: 'flip',
+        id: c.id,
+        fav: fav,
+      }),
+    [fav]
+  );
+
   return (
     <div className="cart__card" key={c.id}>
-      <img className="cart__like" src={like}></img>
+      {fav ? (
+        <img onClick={() => flip()} className="cart__like" src={liked}></img>
+      ) : (
+        <img onClick={() => flip()} className="cart__like" src={like}></img>
+      )}
       <img className="cart__img" src={c.img}></img>
       <div className="cart__info">
         <div className="cart__text">
