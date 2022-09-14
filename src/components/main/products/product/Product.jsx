@@ -31,7 +31,7 @@ function Product({ id, image, price, name, meta, favorite }) {
   };
 
   const addToCartAmount = () => {
-    setTotal(Number.parseFloat(price) * amount);
+    setTotal(price * amount);
     dispatch({ type: 'changed', id: id, total: total, amount: amount });
   };
 

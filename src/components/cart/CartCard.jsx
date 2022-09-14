@@ -4,7 +4,7 @@ import like from './heart-svgrepo-com.svg';
 
 function CartCard({ c }) {
   const dispatcher = useContext(CartDispatchContext);
-  const [total, setTotal] = useState(Number.parseFloat(c.total));
+  const [total, setTotal] = useState(c.total);
   const [amount, setAmount] = useState(c.amount);
 
   const update = () =>

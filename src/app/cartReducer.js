@@ -19,7 +19,7 @@ function cartReducer(cart, action) {
             ...cart,
             {
               id: action.id,
-              total: Number.parseFloat(action.total),
+              total: action.total,
               amount: 1,
             },
           ];

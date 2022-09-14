@@ -40,7 +40,7 @@ function Cart({ beer }) {
   };
 
   let totalPrice = cart.reduce((prev, cur) => {
-    if (cur) return prev + Number.parseFloat(cur.total);
+    if (cur) return prev + cur.total;
   }, 0);
 
   return (
@@ -48,9 +48,7 @@ function Cart({ beer }) {
       <h3>Корзина</h3>
       <p>
         {cart.length > 0
-          ? `${cart.length} товар на сумму ${Number.parseFloat(
-              totalPrice
-            ).toFixed(2)}p`
+          ? `${cart.length} товар на сумму ${totalPrice.toFixed(2)}p`
           : 'Список товаров пуст'}
       </p>
       <main className="cart">{renderCart()}</main>

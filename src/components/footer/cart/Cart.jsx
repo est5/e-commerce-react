@@ -8,13 +8,13 @@ function Cart() {
 
   const filledCart = () => {
     let total = cart.reduce((prev, cur) => {
-      return prev + Number.parseFloat(cur.total);
+      return prev + cur.total;
     }, 0);
 
     return (
       <div className="favorite footer__entry">
         <span>В корзине: {cart.length}</span>
-        <span>{total ? Number.parseFloat(total).toFixed(2) : '0.00'}p</span>
+        <span>{total ? total.toFixed(2) : '0.00'}p</span>
         <img src={Icon} className="footer__img"></img>
       </div>
     );

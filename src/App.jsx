@@ -35,7 +35,7 @@ const BEER = [
     img: zhiguli,
     price: 109.99,
     name: 'Пиво Жигулевское Бочковое светлое',
-    meta: 'Россия, 0.45л., 5%',
+    meta: 'Россия, 1.2л., 5%',
     favorite: false,
   },
   {
