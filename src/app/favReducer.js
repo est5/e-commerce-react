@@ -19,7 +19,7 @@ function favReducer(favorite, action) {
           ...favorite,
           {
             id: action.id,
-            fav: true,
+            fav: action.fav,
           },
         ];
       }

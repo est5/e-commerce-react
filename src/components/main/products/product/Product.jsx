@@ -29,7 +29,10 @@ function Product({ id, image, price, name, meta, favOnly }) {
       setTotal(obj.total);
     }
     const favChecked = favStore.find((e) => e.id == id);
+    console.log(favChecked);
     if (favChecked) {
+      console.log('NOT');
+
       setFav(favChecked.fav);
     }
   }, []);
